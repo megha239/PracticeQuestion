@@ -82,7 +82,7 @@ public class SocketServer {
 				String line = reader.readLine();
 				while (line != null) {
 					System.out.println("Message : " + line);
-					//write the response to the server file
+					//write the response to the hash map
 					String[] msg = line.split(":");
 					entries.put(Integer.parseInt(msg[0].trim()), msg[1].trim());
 					line = reader.readLine();
